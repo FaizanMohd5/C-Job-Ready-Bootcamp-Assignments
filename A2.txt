@@ -1,0 +1,194 @@
+ASSIGNMENT-2
+
+1. Write a program to print unit digit of a given number
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int n;
+		printf("Enter a number: ");
+		scanf("%d",&n);
+		printf("\nUnit digit of %d is %d",n,n%10);
+		return 0;
+	}
+
+2. Write a program to print a given number without its last digit.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int n;
+		printf("Enter a number: ");
+		scanf("%d",&n);
+		printf("Number without last digit : %d",n/10);
+		return 0;
+	}
+
+3. Write a program to swap values of two int variables
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int a,b;
+		printf("Enter two numbers:\n ");
+		scanf("%d%d",&a,&b);
+		printf("a=%d\nb=%d",a,b);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		printf("\nAfter  swap\na=%d\nb=%d",a,b);	
+		return 0;
+	}
+
+4. Write a program to swap values of two int variables without using a third variable.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int a,b,temp;
+		printf("Enter two numbers:\n ");
+		scanf("%d%d",&a,&b);
+		printf("a=%d\nb=%d",a,b);
+		temp=a;
+		a=b;
+		b=temp;
+		printf("\nAfter  swap\na=%d\nb=%d",a,b);	
+		return 0;
+	}
+
+5. Write a program to input a three-digit number and display the sum of the digits.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int num;
+		printf("Enter two numbers:\n ");
+		scanf("%d%d",&a,&b);
+		printf("a=%\nb=%d",a,b);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		printf("\nAfter  swap\na=%d\nb=%d",a,b);	
+		return 0;
+	}
+
+6. Write a program which takes a character as an input and displays its ASCII code.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		char ch;
+		printf("Enter a character:");
+		scanf("%c",&ch);
+		printf("%d",ch);	
+		return 0;
+	}
+
+7. Write a program to find the position of first 1 in LSB.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+    		int num=5,count=0,res;
+
+		    res=num&1;
+    		count++;
+    		if(res==1)
+        			printf("Position: %d",count);
+  		  num=num>>1;
+    		return 0;
+	}
+
+8. Write a program to check whether the given number is even or odd using a bitwise
+operator.
+ans)
+	#include<stdio.h>
+	int main()
+	{
+		int num;
+		printf("Enter  a number:");
+		scanf("%d",&num);	
+		if((num&1)==0)
+			printf("Even");
+		else
+			printf("Odd");
+		return 0;
+	}
+
+9. Write a program to print size of an int, a float, a char and a double type variable
+ans)
+	#include<stdio.h>
+	int main()
+	{
+    		printf("%d,%d,%d,%d",sizeof(int),sizeof(float),sizeof(char),sizeof(double));
+    		return 0;
+	}
+
+10. Write a program to make the last digit of a number stored in a variable as zero.
+	(Example - if x=2345 then make it x=2340)
+ans)
+	#include<stdio.h>
+	int main()
+	{
+    		int num,rem;
+    		printf("Enter a number:");
+    		scanf("%d",&num);
+    		if((num)%10==0)
+        			printf("Last digit is already zero in %d",num);
+    		else
+    		{
+        			rem=num%10;
+		                printf("%d is converted to %d",num,num-rem);
+    		}
+	    	return 0;
+	}
+
+11. Write a program to input a number from the user and also input a digit. Append a
+	digit in the number and print the resulting number. (Example - number=234 and
+	digit=9 then the resulting number is 2349)
+ans)
+	#include<stdio.h>
+	int main()
+	{
+    		int num,dig;
+    		printf("Enter a number:");
+    		scanf("%d",&num);
+    		printf("Enter a digit to append:");
+    		scanf("%d",&dig);
+    		num=num*10;
+    		num=num+dig;
+    		printf("=%d",num);
+    		return 0;
+	}
+
+12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and
+	convert it into USD.
+
+ans)
+	#include<stdio.h>
+	int main()
+	{
+    		float inr,usd=76.23;
+    		printf("Enter amount in rupee:");
+    		scanf("%f",&inr);
+   		 usd=inr/usd;
+    		printf("%.3f$",usd);
+    		return 0;
+	}
+
+13. Write a program to take a three-digit number from the user and rotate its digits by
+	one position towards the right.
+ans) 
+	#include<stdio.h>
+	int main()
+	{
+		int n,rem;
+    		printf("Enter a number:");
+    		scanf("%d",&n);
+    		rem=n%10;
+    		n=n/10;
+    		rem=rem*100;
+    		n=n+rem;
+    		printf("After rotating: %d",n);
+		return 0;
+	}
