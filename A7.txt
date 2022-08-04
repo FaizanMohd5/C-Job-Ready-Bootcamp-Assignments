@@ -1,0 +1,243 @@
+Assignment - 7 
+				A Job Ready Bootcamp in C++, DSA and IOT MySirG
+
+					Iterative Control Statements (Part - 2)
+
+1. Write a program to find the Nth term of the Fibonnaci series.
+ans)
+#include<stdio.h>
+int main()
+{
+    int n,i,a=-1,b=1,c=0;
+    printf("Enter which term:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    printf("Term %d is %d",n,c);
+    return 0;
+}
+
+2. Write a program to print first N terms of Fibonacci series
+ans)
+#include<stdio.h>
+int main()
+{
+    int n,i,a=-1,b=1,c=0;
+    printf("Enter range :");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        c=a+b;
+        printf(" %d",c);
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+
+3. Write a program to check whether a given number is there in the Fibonacci
+series or not.
+ans)
+#include<stdio.h>
+int main()
+{
+    int n,i,a=-1,b=1,c=0;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    for(i=0;1;i++)
+    {
+        if(n==c)
+        {
+            printf("%d is present in Fibonacci series",n);
+            break;
+        }
+        if(c>n)
+        {
+            printf("%d not present in Fibonacci series",n);
+            break;
+        }
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+
+
+4. Write a program to calculate HCF of two numbers
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,n1,n2,hcf;
+    printf("Enter two numbers:");
+    scanf("%d%d",&n1,&n2);
+    for(i=1;i<=n1*n2;i++)
+    {
+        if(i%n1==0 && i%n2==0)
+            break;
+    }
+    hcf=(n1*n2)/i;
+    printf("HCF is %d",hcf);
+    return 0;
+}
+
+5. Write a program to check whether two given numbers are co-prime
+numbers or not
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,n1,n2,min;
+    printf("Enter two numbers:\n");
+    scanf("%d%d",&n1,&n2);
+    min=(n1<n2)?n1:n2;
+    for(i=2;i<=min;i++)
+    {
+        if(n1%i==0 && n2%i==0)
+            break;
+    }
+    if(i==min+1)
+        printf("co-prime");
+    else
+        printf("Not co-prime");
+    return 0;
+}
+
+6. Write a program to print all Prime numbers under 100
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,n,flag=0;
+    for(n=1;n<=100;n++)
+    {
+        flag=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+                flag=1;
+        }
+        if(flag==0)
+                printf("%d ",n);
+    }
+    return 0;
+}
+
+7. Write a program to print all Prime numbers between two given numbers
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,n,flag=0,a,b;
+    printf("Enter initial and final positions:\n");
+    scanf("%d%d",&a,&b);
+    for(n=a;n<=b;n++)
+    {
+        flag=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+                flag=1;
+        }
+        if(flag==0)
+                printf("%d ",n);
+    }
+    return 0;
+}
+
+8. Write a program to find next Prime number of a given number
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,n,flag=0;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    for(n;1;n++)
+    {
+        flag=0;
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+                flag=1;
+        }
+        if(flag==0)
+        {
+            printf("%d ",n);
+            break;
+        }
+    }
+    return 0;
+}
+
+
+9. Write a program to check whether a given number is an Armstrong number
+or not
+ans)
+#include<stdio.h>
+int main()
+{
+    int n,r,sum=0,c,temp;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+        r=n%10;
+        c=r*r*r;
+        sum=sum+c;
+        n=n/10;
+    }
+    if(temp==sum)
+        printf("Armstrong numcer");
+    else
+        printf("Not an Armstrong number");
+}
+
+10. Write a program to print all Armstrong numbers under 1000
+ans)
+#include<stdio.h>
+int main()
+{
+    int i,temp,rem,c,sum=0;
+    for(i=1;i<100;i++)
+    {
+        sum=0;
+        temp=i;
+        while(temp!=0)
+        {
+            rem=temp%10;
+            c=rem*rem*rem;
+            sum=sum+c;
+            temp=temp/10;
+        }
+        if(i==sum)
+                printf("%d ",i);
+    }
+}
+
+11. Write a program to find position of first 1 in LSB
+ans)
+#include<stdio.h>
+int main()
+{
+    int n,res,count=0;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        res=n&1;
+        count++;
+        if(res==1)
+        {
+            printf("LSB is %d",res);
+            break;
+        }
+        n=n>>1;
+    }
+}
