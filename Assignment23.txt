@@ -1,0 +1,139 @@
+					Assignment - 23 
+			   A Job Ready Bootcamp in C++, DSA and IOT MySirG
+
+					Basics of C++
+
+1. Write a C++ program to print Hello MySirG on the screen.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello MySir";
+    return 0;
+}
+
+2. Write a C++ program to print Hello on the first line and MySirG on the second line using endl.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello"<<endl<<"MySirG";
+    return 0;
+}
+
+3. Write a C++ program to calculate the sum of two numbers.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"Enter two numbers:"<<endl;
+    cin>>a>>b;
+    cout<<"Sum is "<<(a+b);
+    return 0;
+}
+
+4. Write a C++ program to calculate the area of a circle
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int r;
+    cout<<"Enter the radius:";
+    cin>>r;
+    cout<<"Area of circle is "<<(r*r);
+    return 0;
+}
+
+5. Write a C++ program to calculate the volume of a cuboid.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int l,b,h;
+    cout<<"Enter the length:";
+    cin>>l;
+    cout<<"Enter the breadth:";
+    cin>>b;
+    cout<<"Enter the height:";
+    cin>>h;
+    cout<<"Volume of cuboid is "<<(l*b*h);
+    return 0;
+}
+
+6. Write a C++ program to calculate an average of 3 numbers.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    float avg;
+    cout<<"Enter three numbers:"<<endl;
+    cin>>a>>b>>c;
+    avg=(a+b+c)/3.0;
+    cout<<"Average is "<<avg;
+    return 0;
+}
+
+7. Write a C++ program to calculate the square of a number
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout<<"Enter a number:";
+    cin>>a;
+    cout<<"square of "<<a<<" is "<<a*a;
+    return 0;
+}
+
+8. Write a C++ program to swap values of two int variables without using third variable
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"Enter two numbers:"<<endl;
+    cin>>a>>b;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    cout<<"Swapped"<<endl<<"a="<<a<<" b="<<b;
+    return 0;
+}
+
+9. Write a C++ program to find the maximum of two numbers.
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,max;
+    cout<<"Enter two numbers:"<<endl;
+    cin>>a>>b;
+    max=(a>b)?a:b;
+    cout<<"Maximum is "<<max;
+    return 0;
+}
+
+10. Write a C++ program to add all the numbers of an array of size 10
+ans)
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,sum=0,a[]={2,2,3,1,6,5,4,3,1,2};
+    for(i=0;i<10;i++)
+        sum=sum+a[i];
+    cout<<"Sum of elements of array is "<<sum;
+    return 0;
+}
+.
