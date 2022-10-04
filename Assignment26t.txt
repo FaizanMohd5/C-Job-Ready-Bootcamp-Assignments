@@ -1,0 +1,401 @@
+					Assignment - 26 
+			A Job Ready Bootcamp in C++, DSA and IOT MySirG
+
+				Member function, static, constructor
+
+1. Define a class Complex to represent a complex number with instance variables a and b to store real and imaginary parts. Also define following member functions
+a. void setData(int,int)
+b. void showData()
+c. Complex add(Complex)
+ans)
+#include<iostream>
+using namespace std;
+class Complex
+{
+    private:
+        int a,b;
+    public:
+        void setData(int x,int y){a=x;b=y;}
+        void showData(){cout<<a<<"+"<<b<<"i"<<endl;}
+        Complex add(Complex C)
+        {
+            Complex temp;
+            temp.a=a+C.a;
+            temp.b=b+C.b;
+            return temp;
+        }
+};
+int main()
+{
+    Complex c1,c2,c3;
+    c1.setData(3,5);
+    c2.setData(1,2);
+    c3=c1.add(c2);
+    c1.showData();
+    c2.showData();
+    c3.showData();
+    return 0;
+}
+
+2. Define a class Time to represent a time with instance variables h,m and s to store hour, minute and second. Also define following member functions
+a. void setTime(int,int,int)
+b. void showTime()
+c. void normalize()
+d. Time add(Time)
+ans)
+#include<iostream>
+using namespace std;
+class Time
+{
+    private:
+        int h,m,s;
+    public:
+        void setTime(int x,int y,int z){h=x;m=y;s=z;}
+        void showTime(){cout<<h<<":"<<m<<":"<<s<<endl;}
+        void normalize();
+        Time add(Time T)
+        {
+            Time temp;
+            temp.s=s+T.s;
+            temp.m=m+T.m;
+            temp.h=h+T.h;
+            temp.normalize();
+            return temp;
+        }
+};
+void Time::normalize()
+        {
+            while(h>24)
+            {
+                h=h-24;
+            }
+            while(m>=60)
+            {
+                m=m-60;
+                h=h+1;
+            }
+            while(s>=60)
+            {
+                s=s-60;
+                m=m+1;
+            }
+        }
+int main()
+{
+    Time t1,t2,t3;
+    t1.setTime(3,120,500);
+    t2.setTime(2,123,15);
+    t3=t1.add(t2);
+    t3.showTime();
+    return 0;
+}
+
+3. Define a class Cube and calculate Volume of Cube and initialise it using 
+constructor.
+ans)
+#include<iostream>
+using namespace std;
+class Cube
+{
+    private:
+        int s,vol;
+    public:
+        Cube()
+        {
+            s=0;
+        }
+        Cube(int a)
+        {
+            s=0;
+        }
+        void setData(int x){s=x;}
+        void calVol(){vol=s*s*s;}
+        void display()
+        {cout<<"Volume of cube with side "<<s<<" is "<<vol<<endl;}
+};
+int main()
+{
+    Cube c1(2),c2;
+    c1.calVol();
+    c1.display();
+    c2.setData(3);
+    c2.calVol();
+    c2.display();
+    return 0;
+}
+
+4. Define a class Counter and Write a program to Show Counter using Constructor.
+ans)
+#include<iostream>
+using namespace std;
+class Counter
+{
+    private:
+        static int count;
+    public:
+        Counter()
+        {
+            count++;
+        }
+
+        static void showCounter()
+        {
+            cout<<"Number of times constructor called "<<count<<endl;
+        }
+
+};
+int Counter::count=0;
+int main()
+{
+    Counter c1,c2,c3,c4;
+    Counter::showCounter();
+    return 0;
+}
+
+5. Define a class Date and write a program to Display Date and initialise date object using Constructors.
+ans)
+#include<iostream>
+using namespace std;
+class Date
+{
+    private:
+        int d,m,y;
+    public:
+        Date()
+        {
+            cout<<"Default Constructor worked\n";
+            d=9;m=11;y=2001;
+        }
+        Date(int D,int M=11,int Y=2020)
+        {
+            cout<<"Constructor called\n";
+            d=D;m=M;y=Y;
+        }
+        void showDate()
+        {
+            cout<<d<<"/"<<m<<"/"<<y<<endl;
+        }
+        ~Date()
+        {
+            cout<<"Destructed "<<d<<endl;
+        }
+};
+
+int main()
+{
+    Date d1(6,2),d2,d3(5);
+    d1.showDate();
+    d2.showDate();
+    d3.showDate();
+    return 0;
+}
+
+6. Define a class student and write a program to enter student details using constructor
+and define member function to display all the details.
+ans)
+#include<iostream>
+#include<string.h>
+using namespace std;
+class student
+{
+    private:
+        char name[30];
+        int marks;
+    public:
+        student()
+        {
+            cout<<"Default constructor worked\n";
+            strcpy(name,"ABC");
+            marks=35;
+        }
+        student(const char *s,int score=35)
+        {
+            cout<<"Constructor worked\n";
+            strcpy(name,s);
+            marks=score;
+        }
+        ~student()
+        {
+            cout<<"Destructor called for "<<name<<endl;
+        }
+        void display()
+        {
+            cout<<"Name: "<<name<<endl<<"Marks: "<<marks<<endl;
+        }
+};
+int main()
+{
+    student s1,s2("Giga"),s3("Chad",87);
+    s1.display();
+    s2.display();
+    s3.display();
+    return 0;
+}
+
+7. Define a class Box and write a program to enter length, breadth and height and initialise 
+objects using constructor also define member functions to calculate volume of the box.
+ans)
+#include<iostream>
+
+using namespace std;
+class Box
+{
+    private:
+        int l,b,h,vol;
+    public:
+        Box()
+        {
+            cout<<"DEFAULT CONSTRUCTOR CALLED\n";
+            l=b=h=0;
+        }
+        Box(int L,int B=1,int H=1)
+        {
+            cout<<"CONSTRUCTOR CALLED\n";
+            l=L;b=B;h=H;
+        }
+        void calVol(){vol=l*b*h;}
+        void display()
+        {
+            cout<<"Volume is "<<vol<<endl;
+        }
+};
+int main()
+{
+    Box b1,b2(2),b3(2,4,5);
+    b1.calVol();
+    b2.calVol();
+    b3.calVol();
+    b1.display();
+    b2.display();
+    b3.display();
+    return 0;
+}
+
+8. Define a class Bank and define member functions to read principal , rate of interest and year. Another member functions to calculate simple interest and display it.
+Initialise all details using constructor.
+ans)
+#include<iostream>
+using namespace std;
+class Bank
+{
+    private:
+        int p,t,r;
+        double si;
+    public:
+        Bank()
+        {
+            p=1000;t=5;r=10;
+            cout<<"Default consructor worked\n";
+        }
+        Bank(int P,int T=1,int R=10)
+        {
+            p=P;t=T;r=R;
+            cout<<"Constructor worked\n";
+        }
+        void setPTR(int P,int T,int R=10){p=P;t=T;r=R;}
+        void calSi(){si=(p*t*r)/100.0;}
+        void display()
+        {cout<<si<<endl;}
+};
+int main()
+{
+    Bank b1,b2(1690,7),b3(10000,5,10),b4(67000);
+    b1.calSi();
+    b2.calSi();
+    b3.calSi();
+    b4.calSi();
+    cout<<"simple interest: \n";
+    b1.display();
+    b2.display();
+    b3.display();
+    b4.display();
+    return 0;
+}
+
+9. Define a class Bill and define its member function get() to take detail of customer ,calculateBill() function to calculate electricity bill using below tariff :Upto 100 unit RS. 1.20 per unit From 100 to 200 unit RS. 2 per unit
+Above 200 units RS. 3 per unit.
+ans)
+#include<iostream>
+using namespace std;
+class Bill
+{
+    private:
+        int units;
+        float rs;
+    public:
+        void get()
+        {
+            cout<<"Enter the units consumed:";
+            cin>>units;
+            rs=0.0;
+        }
+        void CalculateBill();
+        void showBill()
+        {
+            cout<<"\nYour elecricity Bill: "<<rs;
+        }
+};
+void Bill::CalculateBill()
+{
+
+   while(units)
+   {
+        switch(units<=100)
+        {
+            case 1: rs=rs+1.20; break;
+            case 0:
+                switch(units<=200)
+                {
+                    case 1: rs=rs+2.0; break;
+                    case 0:
+                        switch(units>200)
+                        {
+                            case 1: rs=rs+3.0; break;
+                            case 0: break;
+                        }break;
+                }break;
+        }
+        units--;
+   }
+}
+int main()
+{
+    Bill b1;
+    int unit;
+    cout<<"Enter the units consumed:";
+    b1.get();
+    b1.CalculateBill();
+    b1.showBill();
+    return 0;
+}
+
+10. Define a class StaticCount and create a static variable. Increment this variable in a function and call 
+this 3 times and display the result.
+ans)
+#include<iostream>
+using namespace std;
+class StaticCount
+{
+    private:
+        static int counter;
+    public:
+        void increment()
+        {
+            counter++;
+        }
+        static void display()
+        {
+            cout<<"Function called: "<<counter<<" times";
+        }
+};
+int StaticCount::counter=0;
+int main()
+{
+    StaticCount s1,s2;
+    s1.increment();
+    s1.increment();
+    s2.increment();
+    StaticCount::display();
+    return 0;
+}
+
