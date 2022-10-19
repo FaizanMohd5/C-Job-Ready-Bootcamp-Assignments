@@ -1,5 +1,3 @@
-ASSIGNMENT-1
-
 1. Write a program to print Hello Students on the screen.
 ans) 	
 	#include<stdio.h>
@@ -19,7 +17,7 @@ ans)
 		return 0;
 	}
 
-3. Write a program to print “MySirG” on the screen. (Remember to print in double quotes)
+3. Write a program to print â€œMySirGâ€ on the screen. (Remember to print in double quotes)
 ans)
 	#include<stdio.h>
 	int main()
@@ -31,7 +29,7 @@ ans)
 4. WAP to find the area of the circle. Take radius of circle from user as input and print the
 result in below given format.
 
-	Expected output format – “Area of circle is A having the radius R”. Replace A with area
+	Expected output format â€“ â€œArea of circle is A having the radius Râ€. Replace A with area
 	& R with radius.
 ans)
 	#include<stdio.h>
@@ -57,7 +55,7 @@ ans)
 	}
 
 6. WAP to print the name of the user in double quotes.
-	Expected output format – “Hello , Amit Kumar”
+	Expected output format â€“ â€œHello , Amit Kumarâ€
 ans)
 	#include<stdio.h>
 	int main()
@@ -66,7 +64,7 @@ ans)
 		return 0;
 	}
 
-7. WAP to print “%d” on the screen.
+7. WAP to print â€œ%dâ€ on the screen.
 ans)
 	#include<stdio.h>
 	int main()
@@ -75,7 +73,7 @@ ans)
 		return 0;
 	}
 
-8. WAP to print “\n” on the screen.
+8. WAP to print â€œ\nâ€ on the screen.
 ans)
 	#include<stdio.h>
 	int main()
@@ -84,7 +82,7 @@ ans)
 		return 0;
 	}
 
-9. WAP to print “\\” on the screen.
+9. WAP to print â€œ\\â€ on the screen.
 ans)
 	#include<stdio.h>
 	int main()
@@ -96,10 +94,10 @@ ans)
 10. WAP to take date as an input in below given format and convert the date format and
 display the result as given below.
 	
-	User Input date format – “DD/MM/YYYY” (27/11/2022)
+	User Input date format â€“ â€œDD/MM/YYYYâ€ (27/11/2022)
 	
-	Output format –
-“		Day – DD , Month – MM , Year – YYYY” (Day – 27 ,Month – 07 , Year – 2022)
+	Output format â€“
+â€œ		Day â€“ DD , Month â€“ MM , Year â€“ YYYYâ€ (Day â€“ 27 ,Month â€“ 07 , Year â€“ 2022)
 ans)
 	#include<stdio.h>
 	int main()
@@ -114,11 +112,11 @@ ans)
 11. WAP to take time as an input in below given format and convert the time format and
 display the result as given below.
 	
-	User Input date format – “HH:MM”
+	User Input date format â€“ â€œHH:MMâ€
 	
-	Output format – “HH hour and MM Minute”
-		Example –
-“			11:25” converted to “11 Hour and 25 Minute”
+	Output format â€“ â€œHH hour and MM Minuteâ€
+		Example â€“
+â€œ			11:25â€ converted to â€œ11 Hour and 25 Minuteâ€
 ans)
 	#include<stdio.h>
 	int main()
@@ -133,8 +131,8 @@ ans)
 12. Find output of below code:
 	int main()
 	{
-		int x = printf(“ineuron”);
-		printf(“%d”,x);
+		int x = printf(â€œineuronâ€);
+		printf(â€œ%dâ€,x);
 		return 0;
 	}
 ans)
