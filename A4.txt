@@ -1,6 +1,4 @@
-Assignment - 4 		A Job Ready Bootcamp in C++, DSA and IOT MySirG
-
-				Iterative Control Statements
+Iterative Control Statements
 
 1. Write a program to print MySirG 5 times on the screen
 ans)
