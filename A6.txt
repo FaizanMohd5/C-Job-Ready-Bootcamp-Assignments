@@ -1,7 +1,4 @@
-Assignment - 6 			
-				A Job Ready Bootcamp in C++, DSA and IOT MySirG
-
-						Use any loop
+Use any loop
 
 1. Write a program to calculate sum of first N natural numbers
 ans)
