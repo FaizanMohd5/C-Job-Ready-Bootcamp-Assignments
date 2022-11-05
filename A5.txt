@@ -1,9 +1,3 @@
-					Assignment - 5
-		
-			     A Job Ready Bootcamp in C++, DSA and IOT MySirG
-
-				More on Iterative Control Statements
-
 1. Write a program to print MySirG N times on the screen
 ans)
 #include<stdio.h>
